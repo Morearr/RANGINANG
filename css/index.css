@@ -82,8 +82,6 @@
     line-height: 1.1;
     text-transform: uppercase;
     letter-spacing: 1px;
-    max-width: 280px;
-    word-spacing: 10px;
 }
 
 .hero-subtitle {
@@ -108,7 +106,7 @@
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
     border-radius: 20px;
-    padding: 30px 45px;
+    padding: 30px 40px;
     max-width: 400px;
     z-index: 10;
     color: var(--white);
@@ -315,11 +313,6 @@
 
 /* Responsive Design for Index Page */
 @media (max-width: 1024px) {
-    .hero-main-title {
-        max-width: 260px;
-        word-spacing: 9px;
-    }
-    
     .tagline-section {
         padding: 50px 0;
     }
@@ -352,8 +345,6 @@
     
     .hero-main-title {
         font-size: 1.8rem;
-        max-width: 220px;
-        word-spacing: 8px;
     }
     
     .hero-subtitle {
@@ -406,8 +397,6 @@
     .hero-main-title {
         font-size: 1.4rem;
         margin-bottom: 10px;
-        max-width: 180px;
-        word-spacing: 6px;
     }
     
     .hero-subtitle {
