@@ -1,0 +1,480 @@
+/* Index Page Styles - Beranda */
+
+/* Animation Keyframes */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px) translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(-50%);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tagline-section {
+    text-align: center;
+    margin-bottom: 70px; /* Atur sesuai kebutuhan, bisa diganti nilainya */
+}
+
+/* Beranda Hero Section */
+.beranda-hero {
+    margin-top: var(--header-height);
+    position: relative;
+    height: 100vh;  /* Mengatur tinggi gambar hero agar mengisi seluruh layar */
+    overflow: hidden;
+    background: var(--primary-green);
+}
+
+.hero-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Memastikan gambar menyesuaikan dengan baik tanpa terpotong */
+    object-position: center; /* Menjaga gambar tetap terfokus di tengah */
+    display: block;
+}
+
+.hero-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    color: var(--white);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    max-width: 450px;
+    z-index: 2;
+    animation: fadeInLeft 1s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.hero-main-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 12px;
+    opacity: 0.95;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.hero-text-overlay {
+    position: absolute;
+    bottom: 30px;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 30px 50px;
+    max-width: 500px;
+    z-index: 10;
+    color: var(--white);
+    text-align: left;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Beranda Content */
+.beranda-content {
+    position: relative;
+    margin-bottom: 0;
+    background: var(--light-beige);
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    position: relative;
+    z-index: 1;
+}
+
+.tagline-section {
+    background: var(--primary-green);
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.tagline-section .main-tagline {
+    font-family: var(--font-garamond);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1C3A1C;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: block;
+    padding: 0 20px;
+    line-height: 1.1;
+    max-width: 1200px;
+}
+
+.product-content-section {
+    padding: var(--section-padding) 0;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+}
+
+/* Product Preview Grid */
+.product-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: var(--section-padding);
+    margin-top: 60px;
+    align-items: stretch;
+    padding-top: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.product-preview-card {
+    background: var(--white);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-heavy);
+    transition: all var(--transition-normal);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 350px;
+    border: 3px solid var(--secondary-yellow);
+    transform: scale(1);
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.product-preview-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.product-preview-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.product-preview-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.product-preview-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    border-color: var(--primary-green);
+}
+
+.preview-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.preview-overlay {
+    padding: 25px;
+    text-align: center;
+    background: var(--primary-green);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    min-height: 130px;
+    position: relative;
+}
+
+.preview-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.product-preview-card:hover .preview-overlay::before {
+    opacity: 1;
+}
+
+.preview-title {
+    font-size: 1.3rem;
+    color: #DAA520;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.preview-description {
+    font-size: 0.95rem;
+    color: #e4eb9c;
+    opacity: 0.9;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* Beranda Quotes */
+.beranda-quotes {
+    text-align: center;
+    color: #DAA520;
+    max-width: 900px;
+    margin: 40px auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.beranda-quotes .main-quote {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    border-radius: var(--border-radius-md);
+    padding: 35px;
+    margin-bottom: 25px;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    font-style: italic;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.beranda-quotes .secondary-quote {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-md);
+    padding: 30px;
+    font-size: 1.15rem;
+    
+    line-height: 1.7;
+    font-style: italic;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+/* Responsive Design for Index Page */
+@media (max-width: 1024px) {
+    .tagline-section {
+        padding: 50px 0;
+    }
+    
+    .tagline-section .main-tagline {
+        font-size: 2.8rem;
+        letter-spacing: 1.5px;
+        padding: 0 30px;
+        max-width: 900px;
+    }
+    
+    .product-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .beranda-hero {
+        margin-top: 60px;
+        height: 60vh;
+    }
+    
+    .hero-text-overlay {
+        left: 20px;
+        max-width: 350px;
+        animation: fadeInUp 1s ease forwards;
+        animation-delay: 0.3s;
+    }
+    
+    .hero-main-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem;
+    }
+    
+    .tagline-section {
+        padding: 40px 0;
+    }
+    
+    .tagline-section .main-tagline {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        letter-spacing: 1px;
+        padding: 0 25px;
+        max-width: 700px;
+    }
+    
+    .product-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .product-preview-card {
+        max-width: 400px;
+        margin: 0 auto;
+        animation-delay: 0s;
+    }
+    
+    .product-preview-card:nth-child(n) {
+        animation-delay: 0.1s;
+    }
+}
+
+@media (max-width: 480px) {
+    .beranda-hero {
+        margin-top: 50px;
+        height: 50vh;
+    }
+    
+    .hero-text-overlay {
+        left: 15px;
+        max-width: 280px;
+    }
+    
+    .hero-main-title {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    
+    .hero-description {
+        font-size: 0.8rem;
+    }
+    
+    .tagline-section {
+        padding: 30px 0;
+    }
+    
+    .tagline-section .main-tagline {
+        font-size: 1.9rem;
+        letter-spacing: 0.5px;
+        padding: 0 20px;
+        max-width: 500px;
+    }
+    
+    .beranda-content {
+        padding: 40px 0;
+    }
+    
+    .content-wrapper {
+        padding: 0 10px;
+    }
+    
+    .product-preview-grid {
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+    
+    .product-preview-card {
+        min-height: 280px;
+    }
+    
+    .preview-img {
+        height: 160px;
+    }
+    
+    .preview-overlay {
+        padding: 20px;
+        min-height: 100px;
+    }
+    
+    .preview-title {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .preview-description {
+        font-size: 0.85rem;
+    }
+    
+    .beranda-quotes .main-quote {
+        padding: 25px;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    
+    .beranda-quotes .secondary-quote {
+        padding: 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .tagline-section {
+        padding: 25px 0;
+    }
+    
+    .tagline-section .main-tagline {
+        font-size: 1.7rem;
+        letter-spacing: 0.5px;
+        padding: 0 15px;
+        max-width: 300px;
+    }
+}
