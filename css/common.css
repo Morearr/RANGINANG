@@ -41,7 +41,7 @@
     font-family: var(--font-primary);
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(bd8b25);
+    color: #bd8b25;
     text-decoration: none;
     letter-spacing: 0.5px;
     transition: opacity var(--transition-normal);
