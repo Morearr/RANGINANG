@@ -67,7 +67,7 @@
     transform: translateY(-50%);
     color: var(--white);
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    max-width: 450px;
+    max-width: 400px;
     z-index: 2;
     animation: fadeInLeft 1s ease forwards;
     animation-delay: 0.3s;
