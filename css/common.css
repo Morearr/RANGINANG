@@ -58,7 +58,7 @@
 }
 
 .nav-link {
-    color: var(--white);
+    color: #bd8b25;
     text-decoration: none;
     font-weight: 500;
     padding: 10px 18px;
@@ -84,7 +84,7 @@
     border: none;
     cursor: pointer;
     padding: 8px;
-    color: #DAA520;
+    color: #bd8b25;
     font-size: 24px;
     font-weight: bold;
     min-height: 44px;
@@ -94,12 +94,12 @@
 }
 
 .mobile-menu-toggle:focus {
-    outline: 2px solid #DAA520;
+    outline: 2px solid #bd8b25;
     outline-offset: 2px;
 }
 
 .mobile-menu-toggle:hover {
-    background: rgba(218, 165, 32, 0.1);
+    background: rgba(189, 139, 37, 0.1);
     border-radius: 4px;
 }
 
@@ -120,7 +120,7 @@
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--white);
+    background: #bd8b25;
     transition: all var(--transition-normal);
     transform: translateX(-50%);
 }
@@ -522,7 +522,7 @@
 /* Additional mobile navigation styles */
 @media (max-width: 768px) {
     .mobile-menu-toggle.active {
-        color: var(--white);
+        color: #bd8b25;
     }
     
     .mobile-menu-toggle.active::before {
