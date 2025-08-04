@@ -106,7 +106,7 @@
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
     border-radius: 20px;
-    padding: 30px 50px;
+    padding: 30px 45px;
     max-width: 400px;
     z-index: 10;
     color: var(--white);
